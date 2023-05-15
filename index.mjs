@@ -3,6 +3,7 @@ import Dog from "./Dog.mjs"
 
 let dogArr = [...dogs]
 let currentDog = getDog()
+let isWaiting = false
 
 function getDog() {
     const dog = new Dog(dogArr.shift())
@@ -17,14 +18,18 @@ function render() {
 }
 
 document.body.addEventListener('click', (e) => {
-    if(e.target.id) {
-        currentDog.setLikeState(e.target.id)
-        render()
-
-        setTimeout(() => {
-            currentDog = getDog()
+    if(!isWaiting) {
+        if(e.target.id) {
+            isWaiting = true
+            currentDog.setLikeState(e.target.id)
             render()
-        }, 1000)
+
+            setTimeout(() => {
+                isWaiting = false
+                currentDog = getDog()
+                render()
+            }, 1000)
+        }
     }
 })
 
