@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.container__inner {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 0.5em 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img {
+    width: 1rem;
+}
+.logo {
+    width: 3rem;
+}
+
+.main__img {
+    position: relative;
+    height: 80vh;
+}
+.main__user-img {
+    border-radius: 15px;
+    height: inherit;
+    display: block;
+    margin: 0 auto;
+}
+.badge {
+    position: absolute;
+    width: 9rem;
+    top: 6%;
+    left: 5.9%;
+    border-radius: 10.3807px;
+    transform: rotate(-30deg);
+}
+.user-info {
+    position: absolute;
+    bottom: 3%;
+    left: 8%;
+}
+.user-info-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F8F8F8;
+}
+.user-info-question {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #B7B7B7;
+}
+
+.main__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 1rem 0;
+}
+.main__btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cross:hover, .cross::after {
+    background: #FFE7EF;
+}
+.heart::after, .heart:hover {
+    background: #DBFFF4;
+}
+.btn-img {
+    width: 1rem;
+}
